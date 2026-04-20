@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>OMEGA HRP // SCP SYSTEM</title>
+
+<style>
+body {
+    margin: 0;
+    background-color: #050505;
+    color: #00ff9f;
+    font-family: "Courier New", monospace;
+    text-align: center;
+}
+
+/* HEADER */
+header {
+    padding: 50px;
+    border-bottom: 1px solid #222;
+}
+
+h1 {
+    font-size: 50px;
+    letter-spacing: 6px;
+    text-shadow: 0 0 10px #00ff9f;
+}
+
+/* TERMINAL */
+.terminal {
+    margin-top: 80px;
+    font-size: 18px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background: #00ff9f;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {opacity: 1;}
+    25%, 75% {opacity: 0;}
+}
+
+/* BUTTONY */
+.btn {
+    display: inline-block;
+    margin: 20px;
+    padding: 15px 40px;
+    color: #00ff9f;
+    text-decoration: none;
+    border: 2px solid #00ff9f;
+    transition: 0.3s;
+    box-shadow: 0 0 5px #00ff9f, 0 0 10px #00ff9f inset;
+}
+
+.btn:hover {
+    background: #00ff9f;
+    color: #000;
+    box-shadow: 0 0 20px #00ff9f;
+}
+
+/* SEKCJE */
+.rules, .hierarchy {
+    margin-top: 120px;
+}
+
+.rank {
+    margin: 10px auto;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #00ff9f;
+    transition: 0.3s;
+}
+
+.rank:hover {
+    background: #111;
+    transform: scale(1.05);
+}
+
+footer {
+    margin-top: 100px;
+    font-size: 12px;
+    color: #666;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>OMEGA HRP</h1>
+    <p>[ SCP FOUNDATION // SYSTEM BOOTING ]</p>
+</header>
+
+<div class="terminal">
+    <p id="line1"></p>
+    <p id="line2"></p>
+    <p id="line3"></p>
+    <span class="cursor"></span>
+</div>
+
+<div id="mainContent" style="display:none;">
+
+    <div>
+        <a class="btn" href="https://discord.gg/FWCabm74" target="_blank">DISCORD</a>
+        <a class="btn" href="https://www.tiktok.com/@omegahardrp" target="_blank">TIKTOK</a>
+    </div>
+
+    <div class="rules">
+        <p>[ DOKUMENTACJA SYSTEMOWA ]</p>
+        <a class="btn" href="https://docs.google.com/document/d/1KLJ2jSA-2I6FCw_jUBNKqe40FrDY8gvNMsWTsT6gcrs/edit?usp=sharing" target="_blank">
+            REGULAMIN
+        </a>
+    </div>
+
+    <div class="hierarchy">
+        <h2>HIERARCHIA OMEGA HRP</h2>
+
+        <div class="rank">[ REKRUTER ADMINISTRACJI HRP ]</div>
+        <div class="rank">[ OPIEKUN ADMINISTRACJI ]</div>
+        <div class="rank">[ ST. ADMINISTRATOR ]</div>
+        <div class="rank">[ ADMINISTRATOR ]</div>
+        <div class="rank">[ MŁ. ADMINISTRATOR ]</div>
+
+        <div class="rank">[ ST. MODERATOR ]</div>
+        <div class="rank">[ MODERATOR ]</div>
+        <div class="rank">[ MŁ. MODERATOR ]</div>
+
+        <div class="rank">[ SUPPORT ]</div>
+        <div class="rank">[ PRAKTYKANT ]</div>
+    </div>
+
+</div>
+
+<footer>
+    SECURE. CONTAIN. PROTECT.
+</footer>
+
+<script>
+function typeEffect(text, element, delay, callback) {
+    let i = 0;
+    function typing() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, delay);
+        } else if (callback) {
+            callback();
+        }
+    }
+    typing();
+}
+
+window.onload = function() {
+    typeEffect("[ BOOTING SYSTEM... ]", document.getElementById("line1"), 30, function() {
+        typeEffect("[ LOADING DATABASE... ]", document.getElementById("line2"), 30, function() {
+            typeEffect("[ ACCESS GRANTED ]", document.getElementById("line3"), 40, function() {
+                setTimeout(() => {
+                    document.getElementById("mainContent").style.display = "block";
+                }, 500);
+            });
+        });
+    });
+}
+</script>
+
+</body>
+</html>
