@@ -5,6 +5,62 @@
 <title>OMEGA HRP // SCP SYSTEM</title>
 
 <style>
+    .pricing {
+    margin-top: 120px;
+}
+
+.price-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.price-box {
+    width: 280px;
+    border: 1px solid #00ff9f;
+    padding: 20px;
+    box-shadow: 0 0 10px #00ff9f33;
+    transition: 0.3s;
+    background: #050505;
+}
+
+.price-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00ff9f66;
+}
+
+.price-box h3 {
+    text-shadow: 0 0 5px #00ff9f;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: #00ff9f;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.price-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.price-box li {
+    padding: 5px;
+    border-bottom: 1px dashed #00ff9f33;
+}
+
+.premium {
+    border: 1px solid #ffcc00;
+    box-shadow: 0 0 15px #ffcc0033;
+}
+
+.premium h3 {
+    color: #ffcc00;
+    text-shadow: 0 0 8px #ffcc00;
+}
 body {
     margin: 0;
     background-color: #050505;
@@ -165,6 +221,53 @@ window.onload = function() {
     });
 }
 </script>
+
+    <div class="pricing">
+    <h2>[ SYSTEM DOSTĘPÓW // CENNIK RANG ]</h2>
+
+    <div class="price-grid">
+
+        <div class="price-box">
+            <h3>RESERVED SLOT</h3>
+            <p class="price">5 PLN</p>
+            <ul>
+                <li>Dostęp do serwera</li>
+                <li>Zarezerwowany slot wejścia</li>
+                <li>Priorytet przy kolejce</li>
+                <li>Podstawowy status gracza</li>
+                <li>Brak uprawnień administracyjnych</li>
+            </ul>
+            <button class="btn">KUP TERAZ</button>
+        </div>
+
+        <div class="price-box">
+            <h3>VIP</h3>
+            <p class="price">20 PLN</p>
+            <ul>
+                <li>Wszystko z Reserved Slot</li>
+                <li>Specjalna ranga VIP</li>
+                <li>Dostęp do VIP stref</li>
+                <li>Kolorowy nick na serwerze</li>
+                <li>Udział w eventach VIP</li>
+            </ul>
+            <button class="btn">KUP TERAZ</button>
+        </div>
+
+        <div class="price-box premium">
+            <h3>PATREON RANK</h3>
+            <p class="price">40 PLN / MIESIĄC</p>
+            <ul>
+                <li>Wszystko z VIP</li>
+                <li>Ekskluzywna ranga PATREON</li>
+                <li>Dostęp do testów SCP</li>
+                <li>Możliwość wpływu na rozwój serwera</li>
+                <li>Specjalne przywileje admin test</li>
+            </ul>
+            <button class="btn">SUBSKRYBUJ</button>
+        </div>
+
+    </div>
+</div>
 
 </body>
 </html>
